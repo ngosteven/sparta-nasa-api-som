@@ -16,7 +16,15 @@ class NasaFeedService
 	end
 
 	def get_response_links
-	    get_result['links']
+	    @nasa_feed_data["links"].class
+	end
+
+	def get_response_element_count
+	    get_result['element_count']
+	end
+
+	def get_response_near_earth_objects
+	    get_result['near_earth_objects']
 	end
 
 end
