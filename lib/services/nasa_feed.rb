@@ -15,4 +15,8 @@ class NasaFeedService
 		@nasa_feed_data.class
 	end
 
+	def get_response_links
+	    get_result['links']
+	end
+
 end
