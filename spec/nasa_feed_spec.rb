@@ -10,19 +10,23 @@ describe 'NasaFeed' do
 		end
 
 		it "should have a results hash" do
-			expect(@nasa_feed.get_class_from_body_response).to eq Hash
+			expect(@nasa_feed.get_class_from_body_response).to eq(Hash)
 	    end
 
 	    it "should return links a hash" do
-	    	expect(@nasa_feed.get_response_links).to eq Hash
+	    	expect(@nasa_feed.get_response_links).to eq(Hash)
 	    end
 
-	    it "should return element count as string" do
-	    	expect(@nasa_feed.get_response_element count).to be_kind_of(String)
+	    it "should return links data a string" do
+	    	expect(@nasa_feed.get_response_links_data).to eq(String)
 	    end
 
-	    it "should return near earth objects as string" do
-	    	expect(@nasa_feed.get_response_near_earth_objects).to be_kind_of(String)
+	    it "should return element count a integer" do
+	    	expect(@nasa_feed.get_response_element_count).to eq(Integer)
+	    end
+
+	    it "should return near earth objects a hash" do
+	    	expect(@nasa_feed.get_response_near_earth_objects).to eq(Hash)
 	    end
 
 	end

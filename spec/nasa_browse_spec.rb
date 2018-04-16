@@ -10,7 +10,31 @@ describe 'NasaBrowse' do
 		end
 
 		it "should have a results hash" do
-			expect(@nasa_browse.get_class_from_body_response).to eq Hash
+			expect(@nasa_browse.get_class_from_body_response).to eq(Hash)
+	    end
+
+	    it "should return links a hash" do
+	    	expect(@nasa_browse.get_response_links).to eq(Hash)
+	    end
+
+	    it "should return page a hash" do
+	    	expect(@nasa_browse.get_response_page).to eq(Hash)
+	    end
+
+	    it "should return page size a integer" do
+	    	expect(@nasa_browse.get_response_page_size).to eq(Integer)
+	    end
+
+	    it "should return page total elements a integer" do
+	    	expect(@nasa_browse.get_response_page_total_elements).to eq(Integer)
+	    end
+
+	    it "should return page total pages a integer" do
+	    	expect(@nasa_browse.get_response_page_total_pages).to eq(Integer)
+	    end
+
+	    it "should return page number a integer" do
+	    	expect(@nasa_browse.get_response_page_number).to eq(Integer)
 	    end
 
 	end

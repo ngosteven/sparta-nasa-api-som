@@ -10,7 +10,19 @@ describe 'NasaLookup' do
 		end
 
 		it "should have a results hash" do
-			expect(@nasa_lookup.get_class_from_body_response).to eq Hash
+			expect(@nasa_lookup.get_class_from_body_response).to eq(Hash)
+	    end
+
+	    it "should return links a hash" do
+	    	expect(@nasa_lookup.get_response_links).to eq(Hash)
+	    end
+
+	    it "should return neo reference id a string" do
+	    	expect(@nasa_lookup.get_response_neo_reference_id).to eq(String)
+	    end
+
+	    it "should return absolute magnitue h a float" do
+	    	expect(@nasa_lookup.get_response_absolute_magnitude_h).to eq(Float)
 	    end
 
 	end
